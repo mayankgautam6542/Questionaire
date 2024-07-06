@@ -67,9 +67,7 @@ const QuestionForm = () => {
           <option value="True/False">True/False</option>
         </select>
         <button onClick={() => deleteQuestion(q.id, parentIndex)}>Delete</button>
-        {q.type === 'True/False' && (
-          <button onClick={() => addQuestion(q.id)}>Add Child Question</button>
-        )}
+        <button onClick={() => addQuestion(q.id)}>+</button>
         {q.children.length > 0 && renderQuestions(q.children, q.id)}
       </div>
     ));
@@ -84,3 +82,4 @@ const QuestionForm = () => {
 };
 
 export default QuestionForm;
+
